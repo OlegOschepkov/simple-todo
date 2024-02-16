@@ -6,6 +6,6 @@ const showEditTitleForm = (target) => {
 
     form.classList.toggle(`is-active`);
   }
-}
+};
 
-export default showEditTitleForm
+export default showEditTitleForm;

@@ -33,6 +33,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new DuplicatePackageCheckerPlugin(),
-    new CircularDependencyPlugin(),
+    new CircularDependencyPlugin()
   ],
 };

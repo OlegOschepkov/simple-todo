@@ -18,7 +18,7 @@
     font-size: 20px;
     line-height: 120%;
 
-    &:after {
+    &::after {
       content: "";
       display: block;
       position: absolute;
@@ -30,7 +30,7 @@
       transition: background-color $trans-default;
     }
 
-    &:before{
+    &::before {
       content: attr(data-before);
       position: absolute;
       display: block;
@@ -50,17 +50,17 @@
     @include has-hover {
       color: transparent;
 
-      &:before {
+      &::before {
         color: $color-dodger;
       }
     }
 
     &.is-active {
-      &:before {
+      &::before {
         font-weight: 500;
       }
 
-      &:after {
+      &::after {
         background-color: $color-default-black;
       }
     }

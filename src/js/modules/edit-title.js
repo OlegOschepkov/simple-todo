@@ -9,14 +9,14 @@ const editTitle = (target) => {
     const formData = new FormData(form);
 
     let string = ``;
-
-    for(let [name, value] of formData) {
-      string = value
+    /* eslint-disable-next-line */
+    for (let [name, value] of formData) {
+      string = value;
     }
 
     title.innerText = string;
     form.reset();
   }
-}
+};
 
-export default editTitle
+export default editTitle;

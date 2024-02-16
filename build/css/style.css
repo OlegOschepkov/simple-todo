@@ -639,7 +639,7 @@ button,
     border: none;
     background-color: transparent;
 }
-.filter__type:after
+.filter__type::after
 {
     position: absolute;
     bottom: 1px;
@@ -656,7 +656,7 @@ button,
 
     background-color: transparent;
 }
-.filter__type:before
+.filter__type::before
 {
     position: absolute;
     top: 50%;
@@ -687,17 +687,17 @@ button,
     {
         color: transparent;
     }
-    .filter__type:hover:not(.focus-visible):before,
-    .filter__type.focus-visible:focus:before
+    .filter__type:hover:not(.focus-visible)::before,
+    .filter__type.focus-visible:focus::before
     {
         color: #5a7fff;
     }
 }
-.filter__type.is-active:before
+.filter__type.is-active::before
 {
     font-weight: 500;
 }
-.filter__type.is-active:after
+.filter__type.is-active::after
 {
     background-color: #000;
 }
@@ -802,8 +802,8 @@ button,
 {
     color: #979797;
 }
-[data-filter-status=finished] .task .task__title:after,
-[data-filter-status=finished] .task .task__text:after
+[data-filter-status=finished] .task .task__title::after,
+[data-filter-status=finished] .task .task__text::after
 {
     position: absolute;
     top: calc(50% + 1px);

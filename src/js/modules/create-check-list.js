@@ -1,5 +1,6 @@
 const createCheckList = () => {
-  // тут создаем новый check-list, просто берем разметку и вставляем в конец [data-to-do], и на форме preventDefault делаем сразу
+  // тут создаем новый check-list, просто берем разметку и вставляем в конец [data-to-do]
+  // на форме preventDefault делаем сразу
   const parent = document.querySelector(`[data-to-do]`);
   const id = new Date().valueOf(); // дату в виде мс, как id можно использовать.
   const markup = `<div class="todo-list__check-list" data-check-list="">
@@ -46,13 +47,13 @@ const createCheckList = () => {
                       <use xlink:href="img/sprite_auto.svg#plus"></use>
                     </svg></span></span><span class="btn__title">добавить пункт</span><span class="btn__subtext">скрыть</span>
               </button>
-            </div>`
+            </div>`;
 
-  parent.insertAdjacentHTML( `beforeend`, markup);
+  parent.insertAdjacentHTML(`beforeend`, markup);
 
   parent.querySelector(`[data-check-list]:last-child`).querySelector(`[data-create-task-form]`).addEventListener(`submit`, (e) => {
     e.preventDefault();
-  })
-}
+  });
+};
 
-export default createCheckList
+export default createCheckList;

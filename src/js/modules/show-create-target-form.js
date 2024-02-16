@@ -4,6 +4,6 @@ const showCreateTargetForm = (target) => {
 
   target.classList.toggle(`is-active`);
   form.classList.toggle(`is-active`);
-}
+};
 
-export default showCreateTargetForm
+export default showCreateTargetForm;

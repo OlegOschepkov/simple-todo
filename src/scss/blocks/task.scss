@@ -45,7 +45,7 @@
     opacity: 1;
     transition: opacity $trans-default, background-color $trans-default;
 
-    @include has-hover{
+    @include has-hover {
       opacity: 0.5;
     }
   }
@@ -59,7 +59,7 @@
     #{$root}__text {
       color: $color-dusty;
 
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         display: block;
