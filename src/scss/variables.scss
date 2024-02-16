@@ -1,0 +1,44 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-mango:                       #FBCE51;
+$color-flamingo:                    #FF5A5A;
+$color-cornflower:                  #5F9CF8;
+$color-dodger:                      #5A7FFF;
+$color-alto:                        #D0D0D0;
+$color-pippin:                      #FFE4E4;
+$color-swan:                        #BEB5B5;
+$color-dusty:                       #979797;
+
+
+
+// Typography
+// ---------------------------------
+
+$ff-inter:                          "Inter", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-1024:                           1024px;
+$vp-768:                            768px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

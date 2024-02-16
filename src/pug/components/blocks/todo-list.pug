@@ -1,0 +1,47 @@
+mixin todo-list
+  section.todo-list(data-to-do)
+    h2.todo-list__title Чек-листы
+    .todo-list__filter
+      +filter(dataFilter)
+      +btn({
+        iconName: "plus",
+        iconWidth: 12,
+        iconHeight: 12,
+        text: "добавить чеклист"
+      }).btn--blue.btn--create-list(data-create-check-list data-dymanic-element)
+
+    .todo-list__check-list(data-check-list)
+      .todo-list__info(data-title-editable)
+        +editTitleForm(dataFormEditTitle)
+        .todo-list__wrapper
+          h3.todo-list__sub-title
+            span.todo-list__title-text(data-title)  Чек-лист 1
+            +btn({
+              iconName: "edit",
+              iconWidth: 20,
+              iconHeight: 20,
+            }).btn--opacity(data-active-element data-edit-title aria-label="Изменить заголовок")
+
+          +btn({
+            text: "Удалить чек-лист",
+          }).todo-list__btn(data-delete-check-list data-dymanic-element)
+
+      ul.todo-list__items(data-items-list)
+        each el in dataTasks
+          li.todo-list__item(data-filter-status=el.status)
+            +task({
+              title: el.title,
+              text: el.text,
+            })
+
+      +createTaskForm(dataFormCreateTask)
+
+      +btn({
+        iconName: "plus",
+        iconWidth: 12,
+        iconHeight: 12,
+        text: "добавить пункт",
+        subtext: "скрыть",
+      }).btn--blue.todo-list__show-form(data-show-form data-dymanic-element)
+
+

@@ -1,0 +1,68 @@
+.filter {
+  display: inline-flex;
+  gap: 40px;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  &__type {
+    padding: 2px 5px;
+    background-color: transparent;
+    position: relative;
+    border: none;
+    color: transparent;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color $trans-default;
+    }
+
+    &:before{
+      content: attr(data-before);
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-default-black;
+      transition: font-weight $trans-default, color $trans-default;
+    }
+
+    .btn__title {
+      pointer-events: none;
+    }
+
+    @include has-hover {
+      color: transparent;
+
+      &:before {
+        color: $color-dodger;
+      }
+    }
+
+    &.is-active {
+      &:before {
+        font-weight: 500;
+      }
+
+      &:after {
+        background-color: $color-default-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mixin picture(options = {})
+  - const path = options.path;
+  - const image = options.image;
+  - const format = options.format;
+  - const width = options.width ? options.width : false;
+  - const height = options.height ? options.height : false;
+  - const altText = options.altText ? options.altText : false;
+
+  picture(class!=attributes.class)
+    source(type='image/webp', srcset="img/" + path + "/" + image + "@1x.webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x")
+    img(src="img/" + path + "/" + image + "@1x." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText)

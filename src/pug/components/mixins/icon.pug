@@ -1,0 +1,7 @@
+mixin icon(options = {})
+  - const iconName = options.iconName ? options.iconName : false;
+  - const iconWidth = options.iconWidth ? options.iconWidth : false;
+  - const iconHeight = options.iconHeight ? options.iconHeight : false;
+
+  svg(width=iconWidth, height=iconHeight, aria-hidden="true")&attributes(attributes)
+    use(xlink:href="img/sprite_auto.svg#" + iconName)

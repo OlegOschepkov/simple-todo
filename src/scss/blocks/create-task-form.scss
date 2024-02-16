@@ -1,0 +1,13 @@
+.create-task-form {
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height $trans-default, opacity $trans-default, padding-top $trans-default, padding-bottom $trans-default;
+
+  &.is-active {
+    padding-bottom: 30px;
+    opacity: 1;
+    max-height: 300px;
+  }
+}

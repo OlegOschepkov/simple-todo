@@ -1,0 +1,74 @@
+.task {
+  $root: &;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  gap: 17px;
+  padding: 20px 0;
+
+  @include vp-767 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__title,
+  &__text {
+    margin: 0;
+    position: relative;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-default-black;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  &__checkbox {
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid $color-dodger;
+    opacity: 1;
+    transition: opacity $trans-default, background-color $trans-default;
+
+    @include has-hover{
+      opacity: 0.5;
+    }
+  }
+
+  [data-filter-status="finished"] & {
+    #{$root}__checkbox {
+      background-color: $color-dodger;
+    }
+
+    #{$root}__title,
+    #{$root}__text {
+      color: $color-dusty;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        top: calc(50% + 1px);
+        left: 0;
+        background-color: $color-dusty;
+      }
+    }
+  }
+}

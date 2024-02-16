@@ -1,0 +1,63 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 2px;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 400;
+  font-family: $ff-inter;
+  background-color: transparent;
+  color: $color-default-black;
+  border: none;
+  border-radius: 66px;
+  outline: none;
+  cursor: pointer;
+
+  transition: all $trans-default;
+
+  @include has-hover {
+    color: $color-dodger;
+  }
+
+  &--blue {
+    color: $color-cornflower;
+    opacity: 1;
+
+    svg {
+      stroke: $color-cornflower;
+    }
+
+    @include has-hover {
+      opacity: 0.5;
+    }
+  }
+
+  &--big {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $color-pippin;
+  }
+
+  &--opacity {
+    opacity: 1;
+
+    @include has-hover {
+      opacity: 0.5;
+    }
+  }
+
+  &--create-list {
+    padding: 16px 60px 16px 15px;
+    background-color: $color-pippin;
+    border-radius: 15px 0 0 15px;
+    position: relative;
+    right: -40px;
+
+    @include vp-1024 {
+      right: auto;
+      border-radius: 15px;
+      padding: 15px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin filter(data)
+  .filter
+    each el in data
+      +btn({
+        text: el.title,
+      }).filter__type(data-filter-type=el.status data-before=el.title class=el.isActive ? "is-active" : "")

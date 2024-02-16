@@ -1,0 +1,15 @@
+mixin createTaskForm(data)
+  form.create-task-form(data-create-task-form data-dymanic-element action="#" method="post")
+    each el in data
+      +custom-input({
+        inputPlaceholder: el.inputPlaceholder,
+        isRequired: el.isRequired,
+        inputType: el.inputType,
+        inputName: el.inputName,
+        inputId: el.inputId
+      })(data-validate-type="text").create-task-form__input
+
+    +btn({
+      type: "submit",
+      text: "добавить",
+    }).btn--blue.btn--big

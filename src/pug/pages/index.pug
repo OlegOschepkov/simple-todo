@@ -1,0 +1,14 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Тестовое задание"
+  - const hasHeader = true
+  - const hasFooter = true
+  - const currentPage = "index"
+
+block main
+  main
+    .container.centered
+      h1.visually-hidden Главная страница
+
+      +todo-list

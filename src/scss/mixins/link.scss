@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  color: $color-dodger;
+  transition: all $trans-default;
+
+  @include has-hover {
+    color: $color-default-black;
+  }
+}

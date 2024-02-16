@@ -1,0 +1,14 @@
+mixin task(options = {})
+  - const title = options.title ? options.title : "";
+  - const text = options.text ? options.text : "";
+
+  .task(data-task)
+    +btn().task__checkbox(data-task-checkbox data-dymanic-element aria-label="завершить задачу")
+    .task__wrapper
+      span.task__title!=title
+      span.task__text!=text
+    +btn({
+      iconName: "delete",
+      iconWidth: 20,
+      iconHeight: 26,
+    }).task__delete(data-delete-task data-dymanic-element aria-label="удалить задачу")

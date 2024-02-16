@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--include ./base/header-->
+<!--include ./base/footer-->
+<!--include ./base/modal-->
+<html lang="ru">
+  <head>
+    <title>Тестовое задание</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Showroom">
+    <meta property="charset" content="utf-8">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <!--+header-->
+    <div class="wrapper">
+      <main>
+        <div class="container centered">
+          <h1 class="visually-hidden">Главная страница</h1>
+          <section class="todo-list" data-to-do>
+            <h2 class="todo-list__title">Чек-листы</h2>
+            <div class="todo-list__filter">
+              <div class="filter">
+                <button class="btn filter__type is-active" type="button" data-filter-type="all" data-before="Все задачи"><span class="btn__title">Все задачи</span>
+                </button>
+                <button class="btn filter__type" type="button" data-filter-type="active" data-before="Активные"><span class="btn__title">Активные</span>
+                </button>
+                <button class="btn filter__type" type="button" data-filter-type="finished" data-before="Выполненные"><span class="btn__title">Выполненные</span>
+                </button>
+              </div>
+              <button class="btn btn--blue btn--create-list" type="button" data-create-check-list data-dymanic-element><span class="btn__icon"><span class="btn__icon-wrp">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="img/sprite_auto.svg#plus"></use>
+                    </svg></span></span><span class="btn__title">добавить чеклист</span>
+              </button>
+            </div>
+            <div class="todo-list__check-list" data-check-list>
+              <div class="todo-list__info" data-title-editable>
+                <form class="create-task-form" data-edit-title-form data-dymanic-element action="#" method="post">
+                  <div class="custom-input create-task-form__input" data-validate-type="text">
+                    <label>
+                      <input type="text" id="11" name="list-title" placeholder="Чек-лист" required>
+                    </label>
+                  </div>
+                  <button class="btn btn--blue btn--big" type="submit"><span class="btn__title">добавить</span>
+                  </button>
+                </form>
+                <div class="todo-list__wrapper">
+                  <h3 class="todo-list__sub-title"><span class="todo-list__title-text" data-title> Чек-лист 1</span>
+                    <button class="btn btn--opacity" type="button" data-active-element data-edit-title aria-label="Изменить заголовок"><span class="btn__icon"><span class="btn__icon-wrp">
+                          <svg width="20" height="20" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#edit"></use>
+                          </svg></span></span>
+                    </button>
+                  </h3>
+                  <button class="btn todo-list__btn" type="button" data-delete-check-list data-dymanic-element><span class="btn__title">Удалить чек-лист</span>
+                  </button>
+                </div>
+              </div>
+              <ul class="todo-list__items" data-items-list>
+                <li class="todo-list__item" data-filter-status="active">
+                  <div class="task" data-task>
+                    <button class="btn task__checkbox" type="button" data-task-checkbox data-dymanic-element aria-label="завершить задачу">
+                    </button>
+                    <div class="task__wrapper"><span class="task__title">Сделать кнопку</span><span class="task__text">Сделать кнопку</span></div>
+                    <button class="btn task__delete" type="button" data-delete-task data-dymanic-element aria-label="удалить задачу"><span class="btn__icon"><span class="btn__icon-wrp">
+                          <svg width="20" height="26" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#delete"></use>
+                          </svg></span></span>
+                    </button>
+                  </div>
+                </li>
+                <li class="todo-list__item" data-filter-status="active">
+                  <div class="task" data-task>
+                    <button class="btn task__checkbox" type="button" data-task-checkbox data-dymanic-element aria-label="завершить задачу">
+                    </button>
+                    <div class="task__wrapper"><span class="task__title">Сделать меню</span><span class="task__text">Сделать меню</span></div>
+                    <button class="btn task__delete" type="button" data-delete-task data-dymanic-element aria-label="удалить задачу"><span class="btn__icon"><span class="btn__icon-wrp">
+                          <svg width="20" height="26" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#delete"></use>
+                          </svg></span></span>
+                    </button>
+                  </div>
+                </li>
+                <li class="todo-list__item" data-filter-status="finished">
+                  <div class="task" data-task>
+                    <button class="btn task__checkbox" type="button" data-task-checkbox data-dymanic-element aria-label="завершить задачу">
+                    </button>
+                    <div class="task__wrapper"><span class="task__title">Сделать подвал</span><span class="task__text">Сделать подвал</span></div>
+                    <button class="btn task__delete" type="button" data-delete-task data-dymanic-element aria-label="удалить задачу"><span class="btn__icon"><span class="btn__icon-wrp">
+                          <svg width="20" height="26" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#delete"></use>
+                          </svg></span></span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <form class="create-task-form" data-create-task-form data-dymanic-element action="#" method="post">
+                <div class="custom-input create-task-form__input" data-validate-type="text">
+                  <label>
+                    <input type="text" id="1" name="title" placeholder="Заголовок" required>
+                  </label>
+                </div>
+                <div class="custom-input create-task-form__input" data-validate-type="text">
+                  <label>
+                    <input type="text" id="2" name="description" placeholder="Описание" required>
+                  </label>
+                </div>
+                <button class="btn btn--blue btn--big" type="submit"><span class="btn__title">добавить</span>
+                </button>
+              </form>
+              <button class="btn btn--blue todo-list__show-form" type="button" data-show-form data-dymanic-element><span class="btn__icon"><span class="btn__icon-wrp">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="img/sprite_auto.svg#plus"></use>
+                    </svg></span></span><span class="btn__title">добавить пункт</span><span class="btn__subtext">скрыть</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!--+footer-->
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
